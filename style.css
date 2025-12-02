@@ -1,0 +1,156 @@
+*{  
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    scroll-snap-type: y mandatory;
+    
+}
+
+section{
+
+    height: 100vh;
+    width: 100%;
+    
+        
+    
+
+}
+.allreels{
+    height: 100vh;
+    width: 100%;
+    
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+
+.reel1{
+    height: 100vh;
+    width: 25vw;
+    background-image: url(https://grazia.wwmindia.com/content/2022/mar/indianmodels-201646653132.jpg);
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    display: flex;
+    align-items: end;
+    color: white;
+    flex-shrink: 0;
+    position: relative;
+    scroll-snap-align: start;
+    overflow: hidden;
+
+}
+.reel1 video{
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+}
+
+body img{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    z-index: 7;
+}
+.reel1 .buton{
+    height: 120px;
+    width: 435px;
+    background: linear-gradient(transparent, black);
+    padding-left: 20px;
+    padding-top: 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    flex-wrap: wrap;
+    position: absolute;
+    z-index: 3;
+
+}
+.reel1 .buton img{
+    height: 32px;
+    width: 32px;
+    border-radius: 19px;
+}
+.reel1 .buton h3{
+    padding-left: 36px;
+}
+.reel1 .buton button{
+    height: 27px;
+    width: 80px;
+    background-color: transparent;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-right: 25px;
+   
+}
+.reel1 .buton button h3{
+    text-align: center;
+}
+.reel1 .new1{
+    height: 380px;
+    width: 49px;
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 4;
+    top: 55%;
+    left: 90%;
+}
+.reel1 .new1 .like{
+    height: 50px;
+    width: 35px;
+    font-size: 30px;
+    background-color: transparent;
+    
+    flex-shrink: 0;
+    
+}
+.reel1 .new1 .comment{
+    height: 50px;
+    width: 35px;
+    font-size: 30px;
+    background-color: transparent;
+
+}
+.reel1 .new1 .share{
+    height: 50px;
+    width: 35px;
+    font-size: 30px;
+    background-color: transparent;
+}
+.reel1 .new1 .menu{
+    height: 50px;
+    width: 35px;
+    font-size: 18px;
+}
+.reel1 .new1 .like h2{
+    font-size: 20px;
+}
+.reel1 .new1 .comment h2{
+    font-size: 20px;
+}
+.reel1 .new1 .share h2{
+    font-size: 20px;
+}
+
+.like-logo{
+    
+}
+.comment-logo{
+
+}
+.share-logo{
+    
+}
