@@ -4,18 +4,20 @@ var p = document.querySelector('.allreels')
 
 
 const posts = [
-  {
+  { 
+    ismuted: true,
     username: "@satya_pyne",
     likeCount: 1200,
     commentCount: 85,
     shareCount: 45,
     isLiked: false,
-    caption: "Learning React Native every single day! 🔥",
-    video: "bro.mp4",
+    caption: "kindness of the thief 🔥",
+    video: "videoplayback.mp4",
     userProfileImage:"https://randomuser.me/api/portraits/men/29.jpg",
     isFollowed: false
   },
   {
+    ismuted: true,
     username: "@travel_with_Satya",
     likeCount: 3400,
     commentCount: 210,
@@ -27,17 +29,19 @@ const posts = [
     isFollowed: false
   },
   {
+    ismuted: true,
     username: "@satyapyne",
     likeCount: 980,
     commentCount: 40,
     shareCount: 25,
     isLiked: false,
     caption: "Trying Kolkata's iconic biryani today! 😍🍽️",
-    video: "bro.mp4",
+    video: "videoplayback.mp4",
     userProfileImage:"https://randomuser.me/api/portraits/men/75.jpg",
     isFollowed: true
   },
   {
+    ismuted: false,
     username: "@gaming_satya",
     likeCount: 5200,
     commentCount: 330,
@@ -48,7 +52,8 @@ const posts = [
     userProfileImage: "https://randomuser.me/api/portraits/women/12.jpg",
     isFollowed: false
   },
-  {
+  { 
+    ismuted: true,
     username: "@dance_with_satya",
     likeCount: 740,
     commentCount: 22,
@@ -64,8 +69,9 @@ function adddata(){
 sum = ''
 posts.forEach(function(fac,idk){
   console.log(idk)
-  sum = sum + ` <div class="reel1">
-                    <video src="${fac.video}" autoplay loop></video>
+  sum = sum + `<div class="reel1">
+                    <div id='${idk}' class="mute">${fac.ismuted?'<i class="ri-volume-mute-fill"></i>':'<i class="ri-volume-up-line"></i>'}</div>
+                    <video src="${fac.video}" ${fac.ismuted?'muted':''} autoplay loop></video>
                      <div class="buton">
                         <img src="${fac.userProfileImage}" alt="">
                         <h3>${fac.username}</h3> 
@@ -98,17 +104,29 @@ adddata()
 
 var t = document.querySelector('.buton button h3')
 var y = document.querySelector('.like-logo i ')
+var h = document.querySelector('.reel1 .mute .ri-volume-mute-fill')
 
 p.addEventListener('click',function(gh){
-  
+  console.log(gh)
  if(gh.target.innerHTML == 'follow'){
    posts[gh.target.id].isFollowed = true
  }
  posts[gh.target.id].likeCount++
- 
+
+ if(gh.target.className == 'mute'){
+    if(posts[gh.target.id].ismuted == false){
+      posts[gh.target.id].ismuted = true
+    }
+    else{
+       posts[gh.target.id].ismuted = false
+    }
+  
+  }
+
    adddata()
 
 })
+
 //t.addEventListener('click',function(){
 //  if()
 //})
