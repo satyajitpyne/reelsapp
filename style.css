@@ -170,3 +170,11 @@ body img{
 .share-logo{
     
 }
+@media( min-width:390px){
+
+    .reel1{
+        width: 47vh;
+        height: 100vh;
+    }
+
+}
