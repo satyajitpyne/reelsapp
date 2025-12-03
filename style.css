@@ -50,7 +50,7 @@ section{
 
 .reel1{
     height: 100vh;
-    width: 25vw;
+    width: 400px;
     background-image: url(https://grazia.wwmindia.com/content/2022/mar/indianmodels-201646653132.jpg);
     
     background-repeat: no-repeat;
@@ -169,12 +169,4 @@ body img{
 }
 .share-logo{
     
-}
-@media( min-width:390px){
-
-    .reel1{
-        width: 47vh;
-        height: 100vh;
-    }
-
 }
