@@ -133,6 +133,9 @@ body img{
     flex-shrink: 0;
     
 }
+.reel1 .new1 .like i{
+    pointer-events: none;
+}
 .reel1 .new1 .comment{
     height: 50px;
     width: 35px;
@@ -160,13 +163,7 @@ body img{
 .reel1 .new1 .share h2{
     font-size: 20px;
 }
+.ri-heart-fill{
+    color: red;
+}
 
-.like-logo{
-    
-}
-.comment-logo{
-
-}
-.share-logo{
-    
-}

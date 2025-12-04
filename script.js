@@ -82,7 +82,7 @@ posts.forEach(function(fac,idk){
                     </div>
                     <div class="new1">
                           <div id='${idk}' class="like">
-                            <h4 class="likelogo"><i id='${idk}' class="ri-heart-line"></i></h4>
+                            ${fac.isLiked?'<i class="ri-heart-fill"></i>':'<i class="ri-heart-line"></i>'}
                            <h2>${fac.likeCount}</h4></div>
                         <div class="comment">
                             <h4 class="commentlogo"><i class="ri-chat-3-line"></i></h4>
@@ -111,8 +111,20 @@ p.addEventListener('click',function(gh){
  if(gh.target.innerHTML == 'follow'){
    posts[gh.target.id].isFollowed = true
  }
- posts[gh.target.id].likeCount++
+ else{
+  posts[gh.target.id].isFollowed = false
+ }
+ if(gh.target.className == 'like'){
+  if (posts[gh.target.id].isLiked == false){
+      posts[gh.target.id].isLiked = true
+      posts[gh.target.id].likeCount++
+  }
+  else{
+    posts[gh.target.id].isLiked = false
+    posts[gh.target.id].likeCount++
 
+  }
+ }
  if(gh.target.className == 'mute'){
     if(posts[gh.target.id].ismuted == false){
       posts[gh.target.id].ismuted = true
